@@ -1,17 +1,17 @@
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  // const { site } = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `);
 
   return (
     <header className='bg-gray-200'>
@@ -89,9 +89,9 @@ function Header() {
               </defs>
             </svg>
 
-            <span className='text-xl font-bold tracking-tight'>
+            {/* <span className='text-xl font-bold tracking-tight'>
               {site.siteMetadata.title}
-            </span>
+            </span> */}
           </h1>
         </Link>
 
@@ -154,7 +154,7 @@ function Header() {
             },
           ].map((link) => (
             <Link
-              className='block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6'
+              className='block mt-4 text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
               key={link.title}
               to={link.route}
             >
