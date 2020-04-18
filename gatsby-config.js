@@ -10,6 +10,14 @@ module.exports = {
     author: `@taylorbryant`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {

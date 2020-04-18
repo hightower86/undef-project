@@ -3,3 +3,22 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+@responsive {
+  .logo {
+    width: 104.52px;
+    height: 39.45px;
+  }
+
+  .h-3945 {
+    width: 104.52px;
+    height: 39.45px;
+  }
+  .h-3285 {
+    width: 87.04px;
+    height: 32.85px;
+  }
+  .h-90px {
+    height: 90px;
+  }
+}
