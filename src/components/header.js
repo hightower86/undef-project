@@ -1,5 +1,6 @@
-import { Link } from 'gatsby';
+//import { Link } from 'gatsby';
 import React, { useState } from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Logo from '../assets/logo.svg';
 import Burger from '../assets/burger.svg';
@@ -19,10 +20,10 @@ function Header() {
   return (
     <header className='border bg-white md:border-b-1 top-0 fixed w-full z-20'>
       <div className='flex flex-wrap  items-center justify-between md:max-w-screen-lg p-2 mx-auto h-12 md:h-90px '>
-        <Link to='/'>
+        <a onClick={() => scrollTo('#home')}>
           {/* <h1 className='flex items-center text-white no-underline'></h1> */}
           <Logo className='h-3285 md:h-3945' />
-        </Link>
+        </a>
 
         <button
           className='md:hidden'
@@ -38,27 +39,30 @@ function Header() {
         >
           {[
             {
-              route: `/about`,
+              route: `#whywe`,
               title: `Почему мы`,
             },
             {
-              route: `/contact`,
+              route: `#home`,
               title: `Проекты`,
             },
             {
-              route: `/contact`,
+              route: `#home`,
               title: `Контакты`,
             },
           ].map((link) => (
-            <Link
+            <a
               className='block hover:text-orange-600 transform 
               md:hover:translate-x-0 hover:translate-x-1 mt-4 py-2 
               text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
               key={link.title}
-              to={link.route}
+              onClick={() => {
+                scrollTo(link.route);
+                toggleExpansion(!isExpanded);
+              }}
             >
               {link.title}
-            </Link>
+            </a>
           ))}
         </nav>
       </div>

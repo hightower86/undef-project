@@ -14,7 +14,10 @@ import KubernetslLogo from '../assets/kubernetes-logo.svg';
 
 const Section2 = () => {
   return (
-    <section className=' pt-24 bg-gray-100 h-screen max-w-full flex flex-col items-center justify-center'>
+    <section
+      id='whywe'
+      className='pt-16 md:pt-24 bg-gray-100 h-screen max-w-full flex flex-col items-center justify-center'
+    >
       <div className=' px-2 py-4 items-center max-w-screen-lg'>
         <div className='md:w-5/6'>
           <div className='inline-block mb-6'>
@@ -27,7 +30,7 @@ const Section2 = () => {
             <div className='-mt-6 h-6 bg-gray-200'></div>
           </div>
 
-          <div className=' pl-2 border-orange-500 border-l-4 text-lg'>
+          <div className=' pl-2 mb-16 border-orange-500 border-l-4 text-base'>
             <p>
               Наша специализация – экосистема современного{' '}
               <span className='text-orange-600'>
@@ -47,19 +50,31 @@ const Section2 = () => {
           </div>
         </div>
 
-        <div className='flex flex-wrap'>
-          <TsLogo className='h-20 w-20' />
-          <ReactLogo className='h-20 w-20' />
-          <VueLogo className='h-20 w-20' />
-          <NextjsLogo className='h-20 w-20' />
-          <GatsbylLogo className='h-20 w-20' />
-          <KubernetslLogo className='h-20 w-20' />
-          <DokerLogo className='h-20 w-20' />
-          <NodeLogo className='h-20 w-20' />
-          <ReduxLogo className='h-20 w-20' />
-          <GraphqlLogo className='h-20 w-20' />
-          <NestjslLogo className='h-20 w-20' />
-          <TsLogo className='h-20 w-20' />
+        <div className='md:flex  mt-8  md:flex md:justify-between'>
+          <div className=' w-full md:w-6/12 md:mr-24 mb-12 '>
+            <div className='flex justify-between mb-16'>
+              <TsLogo className='h-20 w-20' />
+              <ReactLogo className='h-20 w-20' />
+              <VueLogo className='h-20 w-20' />
+            </div>
+            <div className='flex justify-between'>
+              <NextjsLogo className='h-20 w-20' />
+              <GatsbylLogo className='h-20 w-20' />
+              <KubernetslLogo className='h-20 w-20' />
+            </div>
+          </div>
+          <div className=' w-full md:w-6/12'>
+            <div className='flex justify-between mb-16'>
+              <DokerLogo className='h-20 w-20' />
+              <NodeLogo className='h-20 w-20' />
+              <ReduxLogo className='h-20 w-20' />
+            </div>
+            <div className='flex justify-between'>
+              <GraphqlLogo className='h-20 w-20' />
+              <NestjslLogo className='h-20 w-20' />
+              <TsLogo className='h-20 w-20' />
+            </div>
+          </div>
         </div>
       </div>
     </section>

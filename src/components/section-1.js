@@ -7,8 +7,11 @@ import Arrow from '../assets/arrow-down.svg';
 
 const Section1 = () => {
   return (
-    <section className=' pt-24 bg-white h-screen max-w-full flex flex-col items-center justify-center'>
-      <div className='relative md:flex px-2 py-4 items-center max-w-screen-lg'>
+    <section
+      id='home'
+      className=' pt-16 md:pt-24 mb-8 bg-white md:h-screen max-w-full flex flex-col items-center justify-center'
+    >
+      <div className='relative md:flex px-2 md:h-screen items-center max-w-screen-lg'>
         <div className='md:w-1/2 '>
           <h1 className='text-4xl md:text-5xl  font-bold mb-4'>
             Веб и мобильная разработка
@@ -18,9 +21,9 @@ const Section1 = () => {
             и состоявшихся компаний. Возьмем на себя все инженерные задачи:​
             архитектуру, итеративную разработку и поддержку.
           </p>
-          <Button className='mt-16' />
+          <Button className='mt-16 block' />
         </div>
-        <Illustration className='w-1/2 md:block hidden' />
+        <Illustration className='w-1/2 hidden md:block ' />
         <Arrow className='absolute bottom-0 right-0 hidden md:block' />
       </div>
     </section>
