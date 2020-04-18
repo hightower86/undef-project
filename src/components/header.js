@@ -54,6 +54,8 @@ function Header() {
           ].map((link) => (
             <a
               className='block hover:text-orange-600 transform 
+              hover:bg-orange-300
+              md:hover:bg-white
               md:hover:translate-x-0 hover:translate-x-1 mt-4 py-2 
               text-gray-800 no-underline md:inline-block md:mt-0 md:ml-16'
               key={link.title}
@@ -66,12 +68,12 @@ function Header() {
             </a>
           ))}
         </nav>
-        <div className=''>
+        <div className='hidden md:block'>
           <a
             onClick={() => toggleLanguage(false)}
             className={`${
               !isRussian ? 'pt-10 bg-orange-500 text-white' : ''
-            }  mr-4 px-1 pb-2 `}
+            }  mr-3 px-1 pb-2 `}
           >
             Eng
           </a>

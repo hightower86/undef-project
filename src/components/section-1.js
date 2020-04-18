@@ -9,7 +9,7 @@ const Section1 = () => {
   return (
     <section
       id='home'
-      className=' pt-16 md:pt-24 mb-8 bg-white md:h-screen max-w-full flex flex-col items-center justify-center'
+      className=' pt-16 md:pt-24 mb-8 bg-white h-screen max-w-full flex flex-col items-center justify-center'
     >
       <div className='relative md:flex px-2 md:h-screen items-center max-w-screen-lg'>
         <div className='md:w-1/2 '>
