@@ -7,6 +7,7 @@ import Burger from '../assets/burger.svg';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
+  const [isRussian, toggleLanguage] = useState(true);
   // const { site } = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -19,7 +20,7 @@ function Header() {
 
   return (
     <header className='border bg-white md:border-b-1 top-0 fixed w-full z-20'>
-      <div className='flex flex-wrap  items-center justify-between md:max-w-screen-lg p-2 mx-auto h-12 md:h-90px '>
+      <div className='flex flex-wrap  justify-between items-center  md:max-w-screen-lg p-2 mx-auto h-12 md:h-90px '>
         <a onClick={() => scrollTo('#home')}>
           {/* <h1 className='flex items-center text-white no-underline'></h1> */}
           <Logo className='h-3285 md:h-3945' />
@@ -40,21 +41,21 @@ function Header() {
           {[
             {
               route: `#whywe`,
-              title: `Почему мы`,
+              title: `${isRussian ? 'Почему мы' : 'Why we'}`,
             },
             {
               route: `#home`,
-              title: `Проекты`,
+              title: `${isRussian ? 'Проекты' : 'Projects'}`,
             },
             {
               route: `#home`,
-              title: `Контакты`,
+              title: `${isRussian ? 'Контакты' : 'Contacts'}`,
             },
           ].map((link) => (
             <a
               className='block hover:text-orange-600 transform 
               md:hover:translate-x-0 hover:translate-x-1 mt-4 py-2 
-              text-gray-800 no-underline md:inline-block md:mt-0 md:ml-6'
+              text-gray-800 no-underline md:inline-block md:mt-0 md:ml-16'
               key={link.title}
               onClick={() => {
                 scrollTo(link.route);
@@ -65,6 +66,24 @@ function Header() {
             </a>
           ))}
         </nav>
+        <div className=''>
+          <a
+            onClick={() => toggleLanguage(false)}
+            className={`${
+              !isRussian ? 'pt-10 bg-orange-500 text-white' : ''
+            }  mr-4 px-1 pb-2 `}
+          >
+            Eng
+          </a>
+          <a
+            onClick={() => toggleLanguage(true)}
+            className={`${
+              isRussian ? 'pt-10 bg-orange-500 text-white' : ''
+            }  px-1 pb-2 `}
+          >
+            Ru
+          </a>
+        </div>
       </div>
     </header>
   );
