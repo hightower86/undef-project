@@ -13,10 +13,10 @@ const Section1 = () => {
     >
       <div className='relative md:flex px-2 md:h-screen items-center max-w-screen-lg'>
         <div className='md:w-1/2 '>
-          <h1 className='text-4xl md:text-5xl  font-bold mb-4'>
+          <h1 className=' text-4xl md:text-70px  font-bold mb-8 leading-none'>
             Веб и мобильная разработка
           </h1>
-          <p>
+          <p className='text-xl'>
             Мы занимаемся продуктовой разработкой для технологических стартапов
             и состоявшихся компаний. Возьмем на себя все инженерные задачи:​
             архитектуру, итеративную разработку и поддержку.

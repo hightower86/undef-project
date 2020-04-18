@@ -23,14 +23,14 @@ const Section2 = () => {
           <div className='inline-block mb-6'>
             <h2
               className=' inline-block text-3xl 
-          md:text-4xl  font-bold '
+          md:text-5xl  font-bold '
             >
               Современный стэк тэхнологий
             </h2>
             <div className='-mt-6 h-6 bg-gray-200'></div>
           </div>
 
-          <div className=' pl-2 mb-16 border-orange-500 border-l-4 text-base'>
+          <div className=' pl-2 mb-16 border-orange-500 border-l-4 text-xl'>
             <p>
               Наша специализация – экосистема современного{' '}
               <span className='text-orange-600'>

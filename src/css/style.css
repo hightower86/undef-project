@@ -21,4 +21,10 @@
   .h-90px {
     height: 90px;
   }
+  .text-70px {
+    font-size: 70px;
+  }
+}
+body {
+  font-family: TT Norms;
 }

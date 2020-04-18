@@ -10,6 +10,15 @@ module.exports = {
     author: `@taylorbryant`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['TTNorms'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
     `gatsby-plugin-smoothscroll`,
     {
       resolve: 'gatsby-plugin-react-svg',
