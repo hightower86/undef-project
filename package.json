@@ -4,7 +4,7 @@
   "version": "4.0.0",
   "author": "Adel Rezvanov",
   "dependencies": {
-    "gatsby": "^2.20.25",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-offline": "^3.1.4",
     "gatsby-plugin-postcss": "^2.2.3",
